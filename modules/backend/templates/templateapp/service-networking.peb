@@ -1,0 +1,115 @@
+{% extends "core" %}
+
+{% block content %}
+<div class="container mx-auto py-12 px-4 max-w-4xl">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs text-sm mb-8">
+		<ul>
+			<li><a href="/">Domů</a></li>
+			<li><a href="/#sluzby">Služby</a></li>
+			<li>SOHO sítě Ubiquiti</li>
+		</ul>
+	</div>
+
+	<!-- Header -->
+	<div class="text-center mb-12">
+		<div class="text-6xl mb-4">📡</div>
+		<h1 class="text-4xl font-bold mb-4">SOHO sítě Ubiquiti</h1>
+		<p class="text-lg opacity-70 max-w-2xl mx-auto">
+			Navrhuji a instaluji spolehlivé sítě pro domácnosti a malé firmy na platformě Ubiquiti UniFi.
+			Výsledkem je stabilní WiFi pokrytí, bezpečná síť a snadná správa.
+		</p>
+	</div>
+
+	<!-- Co nabízím -->
+	<h2 class="text-2xl font-bold mb-6">Co nabízím</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">📶 WiFi pokrytí</h3>
+				<p class="text-sm opacity-70">Návrh rozmístění access pointů pro plné pokrytí celého objektu bez mrtvých zón. Podpora WiFi 6/6E.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🔒 Segmentace sítě (VLAN)</h3>
+				<p class="text-sm opacity-70">Oddělení IoT zařízení, hostovské sítě a pracovní sítě pro maximální bezpečnost.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🛡️ Firewall a bezpečnost</h3>
+				<p class="text-sm opacity-70">Konfigurace firewall pravidel, IDS/IPS, správa přístupu a ochrana před hrozbami.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🌍 VPN</h3>
+				<p class="text-sm opacity-70">Nastavení site-to-site nebo klientské VPN pro bezpečný vzdálený přístup k domácí nebo firemní síti.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Proces instalace -->
+	<h2 class="text-2xl font-bold mb-6">Jak probíhá instalace</h2>
+	<ul class="steps steps-vertical mb-12">
+		<li class="step step-primary">
+			<div class="text-left ml-4">
+				<div class="font-medium">Konzultace a návrh</div>
+				<div class="text-sm opacity-60">Zjistíme vaše požadavky, půdorys objektu a navrhneme optimální řešení.</div>
+			</div>
+		</li>
+		<li class="step step-primary">
+			<div class="text-left ml-4">
+				<div class="font-medium">Výběr hardware</div>
+				<div class="text-sm opacity-60">Doporučím konkrétní Ubiquiti zařízení (switch, router, AP) dle vašeho rozpočtu a potřeb.</div>
+			</div>
+		</li>
+		<li class="step">
+			<div class="text-left ml-4">
+				<div class="font-medium">Instalace a konfigurace</div>
+				<div class="text-sm opacity-60">Fyzická instalace, kabeláž, konfigurace UniFi Networku, VLAN, firewallu a WiFi.</div>
+			</div>
+		</li>
+		<li class="step">
+			<div class="text-left ml-4">
+				<div class="font-medium">Předání a zaškolení</div>
+				<div class="text-sm opacity-60">Předám vám přístupy, ukáži správu přes UniFi aplikaci a zodpovím vaše dotazy.</div>
+			</div>
+		</li>
+	</ul>
+
+	<!-- FAQ -->
+	<h2 class="text-2xl font-bold mb-4">Časté otázky</h2>
+	<div class="flex flex-col gap-2 mb-12">
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Musím si hardware koupit sám?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Ne, poradím vám s výběrem a zařídím objednávku. Hardware si ale platíte vy – pouze doporučuji a konfiguruji.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Poskytuješ i následnou podporu?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Ano, nabízím servisní podpůru – aktualizace firmware, drobné změny konfigurace nebo řešení výpadků na dálku.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Pracuješ i se stávající sítí jiné značky?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Primárně se specializuji na Ubiquiti, ale mohu poradit i s jiným hardware nebo s migrací na UniFi.
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<a href="/#kontakt" class="btn btn-primary btn-lg">Nezávazná poptávka</a>
+	</div>
+
+</div>
+{% endblock %}
+

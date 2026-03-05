@@ -1,0 +1,130 @@
+{% extends "core" %}
+
+{% block content %}
+<div class="container mx-auto py-12 px-4 max-w-4xl">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs text-sm mb-8">
+		<ul>
+			<li><a href="/">Domů</a></li>
+			<li><a href="/#sluzby">Služby</a></li>
+			<li>Smart Home integrace</li>
+		</ul>
+	</div>
+
+	<!-- Header -->
+	<div class="text-center mb-12">
+		<div class="text-6xl mb-4">🏠</div>
+		<h1 class="text-4xl font-bold mb-4">Smart Home integrace</h1>
+		<p class="text-lg opacity-70 max-w-2xl mx-auto">
+			Propojím vaši domácnost do jednoho chytrého celku pomocí Home Assistant.
+			Automatizace, senzory, osvětlení, vytápění i zabezpečení – vše na jednom místě.
+		</p>
+	</div>
+
+	<!-- Co nabízím -->
+	<h2 class="text-2xl font-bold mb-6">Co nabízím</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">⚙️ Instalace Home Assistant</h3>
+				<p class="text-sm opacity-70">Nasazení Home Assistant OS nebo Container na Raspberry Pi, mini PC nebo NAS. Základní konfigurace a zabezpečení.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🔗 Integrace zařízení</h3>
+				<p class="text-sm opacity-70">Připojení světel (Philips Hue, IKEA Trådfri, Shelly), termostatů, zásuvek, kamer a dalších IoT zařízení.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🤖 Automatizace</h3>
+				<p class="text-sm opacity-70">Tvorba automatizací dle vašich potřeb – ranní scény, přítomnostní detekce, úspora energie, bezpečnostní alarmy.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">📱 Dashboard a ovládání</h3>
+				<p class="text-sm opacity-70">Přehledný Lovelace dashboard pro telefon, tablet i nástěnný displej. Ovládání hlasem přes Google Home nebo Amazon Alexa.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Podporované platformy -->
+	<h2 class="text-2xl font-bold mb-4">Podporované platformy a protokoly</h2>
+	<div class="flex flex-wrap gap-2 mb-12">
+		<span class="badge badge-primary badge-lg">Home Assistant</span>
+		<span class="badge badge-secondary badge-lg">Zigbee</span>
+		<span class="badge badge-secondary badge-lg">Z-Wave</span>
+		<span class="badge badge-accent badge-lg">Matter</span>
+		<span class="badge badge-accent badge-lg">Thread</span>
+		<span class="badge badge-neutral badge-lg">MQTT</span>
+		<span class="badge badge-neutral badge-lg">Shelly</span>
+		<span class="badge badge-neutral badge-lg">Philips Hue</span>
+		<span class="badge badge-neutral badge-lg">IKEA Trådfri</span>
+		<span class="badge badge-neutral badge-lg">Google Home</span>
+	</div>
+
+	<!-- Jak to probíhá -->
+	<h2 class="text-2xl font-bold mb-6">Jak integrace probíhá</h2>
+	<ul class="steps steps-vertical mb-12">
+		<li class="step step-primary">
+			<div class="text-left ml-4">
+				<div class="font-medium">Audit stávajících zařízení</div>
+				<div class="text-sm opacity-60">Zmapuji co máte doma, co chcete přidat a co lze propojit.</div>
+			</div>
+		</li>
+		<li class="step step-primary">
+			<div class="text-left ml-4">
+				<div class="font-medium">Návrh řešení</div>
+				<div class="text-sm opacity-60">Navrhnu vhodný hardware (hub, koordinátor) a způsob integrace bez nutnosti cloudu třetích stran.</div>
+			</div>
+		</li>
+		<li class="step">
+			<div class="text-left ml-4">
+				<div class="font-medium">Instalace a konfigurace</div>
+				<div class="text-sm opacity-60">Nasadím Home Assistant, připojím všechna zařízení, vytvořím automatizace a dashboard.</div>
+			</div>
+		</li>
+		<li class="step">
+			<div class="text-left ml-4">
+				<div class="font-medium">Předání a zaškolení</div>
+				<div class="text-sm opacity-60">Ukáži vám, jak systém ovládat, upravovat automatizace a přidávat nová zařízení.</div>
+			</div>
+		</li>
+	</ul>
+
+	<!-- FAQ -->
+	<h2 class="text-2xl font-bold mb-4">Časté otázky</h2>
+	<div class="flex flex-col gap-2 mb-12">
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Potřebuji předem kupovat nová zařízení?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Ne nutně. Home Assistant podporuje tisíce zařízení – nejprve zhodnotím, co lze integrovat ze stávajícího vybavení.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Funguje to bez internetu?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Ano, Home Assistant běží lokálně. Většina funkcí funguje i bez připojení k internetu, takže váš dům ovládáte i při výpadku sítě.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Co když chci přidat další zařízení později?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Systém je snadno rozšiřitelný. Mohu vám pomoct s integrací dalších zařízení kdykoliv po základní instalaci.
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<a href="/#kontakt" class="btn btn-primary btn-lg">Nezávazná poptávka</a>
+	</div>
+
+</div>
+{% endblock %}
+

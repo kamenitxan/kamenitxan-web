@@ -1,5 +1,153 @@
-{% extends "core" %}
+{%- extends "core" -%}
+{%- block content -%}
 
-{% block content %}
+<!-- HERO -->
+<section class="hero min-h-[70vh] bg-base-100">
+	<div class="hero-content text-center flex-col max-w-3xl">
+		<div class="mb-4 text-6xl">💻</div>
+		<h1 class="text-5xl font-bold">Ahoj, jsem Kamenitxan</h1>
+		<p class="py-6 text-lg opacity-80">
+			Pomáhám firmám a domácnostem s programováním na míru,
+			spolehlivými sítěmi Ubiquiti a chytrou domácností.
+		</p>
+		<a href="/#sluzby" class="btn btn-primary btn-lg">Moje služby</a>
+	</div>
+</section>
 
-{% endblock %}
+<!-- SLUZBY -->
+<section id="sluzby" class="py-20 bg-base-200">
+	<div class="container mx-auto px-4">
+		<h2 class="text-4xl font-bold text-center mb-4">Co dělám</h2>
+		<p class="text-center opacity-60 mb-12">Vyberte si službu, která vám vyhovuje</p>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+			<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+				<div class="card-body items-center text-center">
+					<div class="text-5xl mb-2">☕</div>
+					<h3 class="card-title text-xl">Programování Java/Scala</h3>
+					<p class="opacity-70">Vyvíjím webové aplikace, REST API a backendové systémy v Javě a Scale. Od malých projektů po podnikové aplikace.</p>
+					<div class="card-actions mt-4">
+						<a href="/sluzby/programovani.html" class="btn btn-primary btn-sm">Více informací</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+				<div class="card-body items-center text-center">
+					<div class="text-5xl mb-2">📡</div>
+					<h3 class="card-title text-xl">SOHO sítě Ubiquiti</h3>
+					<p class="opacity-70">Návrh a instalace domácí nebo firemní sítě na platformě Ubiquiti UniFi. Pokrytí WiFi, VLAN, firewall, VPN.</p>
+					<div class="card-actions mt-4">
+						<a href="/sluzby/site-ubiquiti.html" class="btn btn-primary btn-sm">Více informací</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+				<div class="card-body items-center text-center">
+					<div class="text-5xl mb-2">🏠</div>
+					<h3 class="card-title text-xl">Smart Home integrace</h3>
+					<p class="opacity-70">Integrace chytré domácnosti pomocí Home Assistant. Automatizace, senzory, ovládání světel, vytápění a zabezpečení.</p>
+					<div class="card-actions mt-4">
+						<a href="/sluzby/smart-home.html" class="btn btn-primary btn-sm">Více informací</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- O MNE -->
+<section id="o-mne" class="py-20 bg-base-100">
+	<div class="container mx-auto px-4 max-w-4xl">
+		<h2 class="text-4xl font-bold text-center mb-12">O mně</h2>
+		<div class="flex flex-col md:flex-row gap-10 items-center">
+			<div class="text-8xl select-none">👨‍💻</div>
+			<div class="flex-1">
+				<p class="text-lg mb-6 opacity-80">
+					Jsem full-stack vývojář a IT nadšenec se specializací na JVM ekosystém a domácí sítě.
+					Rád řeším problémy čistým kódem a spolehlivými řešeními – ať už jde o webovou aplikaci,
+					síťovou infrastrukturu nebo chytrou domácnost.
+				</p>
+				<div class="flex flex-wrap gap-2">
+					<span class="badge badge-primary">Scala</span>
+					<span class="badge badge-primary">Java</span>
+					<span class="badge badge-secondary">Ubiquiti UniFi</span>
+					<span class="badge badge-secondary">Home Assistant</span>
+					<span class="badge badge-accent">Linux</span>
+					<span class="badge badge-accent">Docker</span>
+					<span class="badge badge-neutral">PostgreSQL</span>
+					<span class="badge badge-neutral">SQLite</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="py-20 bg-base-200">
+	<div class="container mx-auto px-4 max-w-xl">
+		<h2 class="text-4xl font-bold text-center mb-4">Kontakt</h2>
+		<p class="text-center opacity-60 mb-10">Nezávazná poptávka nebo jen dotaz – napište mi</p>
+
+		<div id="contact-success" class="alert alert-success hidden mb-6">
+			<span>✅ Zpráva odeslána! Ozvu se co nejdříve.</span>
+		</div>
+		<div id="contact-error" class="alert alert-error hidden mb-6">
+			<span id="contact-error-msg">Něco se pokazilo, zkuste to prosím znovu.</span>
+		</div>
+
+		<form id="contact-form" class="flex flex-col gap-4">
+			<div class="form-control">
+				<label class="label"><span class="label-text">Jméno</span></label>
+				<input type="text" name="jmeno" placeholder="Vaše jméno" class="input input-bordered w-full" required>
+			</div>
+			<div class="form-control">
+				<label class="label"><span class="label-text">E-mail</span></label>
+				<input type="email" name="email" placeholder="vas@email.cz" class="input input-bordered w-full" required>
+			</div>
+			<div class="form-control">
+				<label class="label"><span class="label-text">Zpráva</span></label>
+				<textarea name="body" rows="5" placeholder="Popište co potřebujete..." class="textarea textarea-bordered w-full" required></textarea>
+			</div>
+			<button type="submit" id="contact-submit" class="btn btn-primary w-full">Odeslat</button>
+		</form>
+
+		<script>
+		document.getElementById('contact-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			var btn = document.getElementById('contact-submit');
+			btn.disabled = true;
+			btn.textContent = 'Odesílám...';
+
+			var params = new URLSearchParams(new FormData(this)).toString();
+
+			fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: params
+			})
+			.then(function(r) { return r.json(); })
+			.then(function(data) {
+				if (data.status === 'success') {
+					document.getElementById('contact-form').classList.add('hidden');
+					document.getElementById('contact-success').classList.remove('hidden');
+				} else {
+					document.getElementById('contact-error-msg').textContent = data.message || 'Něco se pokazilo.';
+					document.getElementById('contact-error').classList.remove('hidden');
+					btn.disabled = false;
+					btn.textContent = 'Odeslat';
+				}
+			})
+			.catch(function() {
+				document.getElementById('contact-error').classList.remove('hidden');
+				btn.disabled = false;
+				btn.textContent = 'Odeslat';
+			});
+		});
+		</script>
+	</div>
+</section>
+
+{%- endblock -%}

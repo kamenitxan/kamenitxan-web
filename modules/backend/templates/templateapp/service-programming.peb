@@ -1,0 +1,100 @@
+{% extends "core" %}
+
+{% block content %}
+<div class="container mx-auto py-12 px-4 max-w-4xl">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs text-sm mb-8">
+		<ul>
+			<li><a href="/">Domů</a></li>
+			<li><a href="/#sluzby">Služby</a></li>
+			<li>Programování Java/Scala</li>
+		</ul>
+	</div>
+
+	<!-- Header -->
+	<div class="text-center mb-12">
+		<div class="text-6xl mb-4">☕</div>
+		<h1 class="text-4xl font-bold mb-4">Programování Java/Scala</h1>
+		<p class="text-lg opacity-70 max-w-2xl mx-auto">
+			Vyvíjím robustní backendové aplikace, REST API a webové systémy postavené na JVM ekosystému.
+			Čistý kód, dobré pokrytí testy a dlouhodobá udržitelnost jsou pro mě samozřejmost.
+		</p>
+	</div>
+
+	<!-- Co nabízím -->
+	<h2 class="text-2xl font-bold mb-6">Co nabízím</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🌐 Webové aplikace</h3>
+				<p class="text-sm opacity-70">Full-stack webové aplikace s backendem v Scale nebo Javě a moderním frontendem.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🖥️ Desktopové aplikace</h3>
+				<p class="text-sm opacity-70">Multiplatformní desktopové aplikace v Javě (JavaFX). Rychlé, nativně vypadající nástroje pro Windows, macOS i Linux.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🗄️ Databázové systémy</h3>
+				<p class="text-sm opacity-70">Práce s PostgreSQL, SQLite a dalšími databázemi. ORM, migrace, optimalizace dotazů.</p>
+			</div>
+		</div>
+		<div class="card bg-base-200">
+			<div class="card-body">
+				<h3 class="card-title text-base">🔧 Refaktoring a migrace</h3>
+				<p class="text-sm opacity-70">Modernizace legacy Java kódu, migrace na Scala, zlepšení architektury stávajících projektů.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tech stack -->
+	<h2 class="text-2xl font-bold mb-4">Technologie</h2>
+	<div class="flex flex-wrap gap-2 mb-12">
+		<span class="badge badge-primary badge-lg">Scala 3</span>
+		<span class="badge badge-primary badge-lg">Java 17+</span>
+		<span class="badge badge-secondary badge-lg">Spark Framework</span>
+		<span class="badge badge-secondary badge-lg">Spring Boot</span>
+		<span class="badge badge-accent badge-lg">PostgreSQL</span>
+		<span class="badge badge-accent badge-lg">SQLite</span>
+		<span class="badge badge-neutral badge-lg">Docker</span>
+		<span class="badge badge-neutral badge-lg">Linux</span>
+		<span class="badge badge-neutral badge-lg">Git</span>
+	</div>
+
+	<!-- FAQ -->
+	<h2 class="text-2xl font-bold mb-4">Časté otázky</h2>
+	<div class="flex flex-col gap-2 mb-12">
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Jak dlouho trvá vývoj projektu?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Záleží na rozsahu. Jednoduchý API endpoint nebo landing page zvládneme do týdne, komplexnější aplikace pak dle domluvy s časovým harmonogramem.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Pracuješ i na existujícím projektu?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Ano, rád se zapojím do stávajícího projektu – code review, nové funkce, opravy chyb nebo migrace na novější technologie.
+			</div>
+		</div>
+		<div class="collapse collapse-arrow bg-base-200">
+			<input type="checkbox">
+			<div class="collapse-title font-medium">Jaká je tvá hodinová sazba?</div>
+			<div class="collapse-content text-sm opacity-70">
+				Cena závisí na složitosti a délce spolupráce. Kontaktujte mě pro nezávaznou nabídku.
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<a href="/#kontakt" class="btn btn-primary btn-lg">Nezávazná poptávka</a>
+	</div>
+
+</div>
+{% endblock %}
+

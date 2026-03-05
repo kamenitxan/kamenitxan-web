@@ -1,0 +1,13 @@
+Dobrý den,
+
+přišla nová poptávka z webu kamenitxan.eu.
+
+Jméno:   {{ name }}
+E-mail:  {{ email }}
+
+Zpráva:
+{{ message }}
+
+---
+Tato zpráva byla odeslána automaticky z kontaktního formuláře.
+
