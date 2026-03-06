@@ -1,4 +1,4 @@
-package cz.kamenitxan.templateapp.pagelet
+package cz.kamenitxan.web.pagelet
 
 import cz.kamenitxan.jakon.core.dynamic.{AbstractJsonPagelet, JsonPagelet, Post}
 import cz.kamenitxan.jakon.core.dynamic.entity.{AbstractJsonResponse, EmptyJsonResponse, JsonFailResponse}

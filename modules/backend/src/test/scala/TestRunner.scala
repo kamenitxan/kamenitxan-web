@@ -3,7 +3,7 @@ import cz.kamenitxan.jakon.Main.JakonApp
 import cz.kamenitxan.jakon.core.Director
 import cz.kamenitxan.jakon.core.configuration.Settings
 import cz.kamenitxan.jakon.logging.Logger
-import cz.kamenitxan.templateapp.AppInit
+import cz.kamenitxan.web.AppInit
 import org.scalatest.{BeforeAndAfterAll, Suites}
 
 import java.io.{File, IOException}

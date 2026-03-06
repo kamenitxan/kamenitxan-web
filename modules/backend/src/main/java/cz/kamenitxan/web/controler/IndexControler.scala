@@ -1,4 +1,4 @@
-package cz.kamenitxan.templateapp.controler
+package cz.kamenitxan.web.controler
 
 import cz.kamenitxan.jakon.core.controller.IController
 import cz.kamenitxan.jakon.core.template.utils.TemplateUtils

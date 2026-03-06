@@ -1,8 +1,8 @@
-package cz.kamenitxan.templateapp
+package cz.kamenitxan.web
 
 import cz.kamenitxan.jakon.JakonInit
 import cz.kamenitxan.jakon.core.Director
-import cz.kamenitxan.templateapp.controler.{IndexControler, NetworkingPage, ProgrammingPage, SmartHomePage}
+import cz.kamenitxan.web.controler.{IndexControler, NetworkingPage, ProgrammingPage, SmartHomePage}
 
 /**
   * Created by TPa on 2019-08-24.

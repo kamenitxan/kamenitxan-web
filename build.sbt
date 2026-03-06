@@ -6,7 +6,7 @@ val V = new {
 	val Scala = "3.3.7"
 	val jakon = "0.7.1"
 }
-val projectName = "template-app"
+val projectName = "kamenitxan-web"
 val projectVersion = "1.0.0"
 
 scalaVersion := V.Scala
@@ -20,10 +20,6 @@ ThisBuild / resolvers += "Artifactory" at "https://nexus.kamenitxan.eu/repositor
 
 
 val Dependencies = new {
-
-	lazy val frontend = Seq(
-
-	)
 
 	lazy val backend = Seq(
 		libraryDependencies ++=
@@ -40,20 +36,9 @@ val Dependencies = new {
 	)
 }
 
-lazy val root = (project in file(".")).aggregate(frontend, backend)
+lazy val root = (project in file(".")).aggregate(backend)
 
-lazy val frontend = (project in file("modules/frontend"))
-	.enablePlugins(ScalaJSPlugin)
-	.settings(scalaJSUseMainModuleInitializer := false)
-	.settings(
-		Dependencies.frontend,
-		Dependencies.tests,
-		Test / jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
-	)
-	.settings(
-		commonBuildSettings,
-		name := projectName + "-fe"
-	)
+
 
 lazy val backend = (project in file("modules/backend"))
 	.settings(Dependencies.backend)
@@ -61,7 +46,7 @@ lazy val backend = (project in file("modules/backend"))
 	.settings(commonBuildSettings)
 	.settings(
 		name := projectName,
-		Compile / mainClass := Some("cz.kamenitxan.templateapp.Main"),
+		Compile / mainClass := Some("cz.kamenitxan.web.Main"),
 		Test / fork := true,
 		scalacOptions ++= Seq(
 			"-deprecation", // emit warning and location for usages of deprecated APIs
@@ -99,28 +84,6 @@ Test / testForkedParallel := false
 Test / parallelExecution:= false
 Test / logBuffered := false
 
-lazy val fastOptCompileCopy = taskKey[Unit]("")
-val jsPath = "modules/backend/src/main/resources"
-fastOptCompileCopy := {
-	val source = (frontend / Compile / fastOptJS).value.data
-	IO.copyFile(
-		source,
-		baseDirectory.value / jsPath / "dev.js"
-	)
-}
-
-lazy val fullOptCompileCopy = taskKey[Unit]("")
-fullOptCompileCopy := {
-	val source = (frontend / Compile / fullOptJS).value.data
-	IO.copyFile(
-		source,
-		baseDirectory.value / jsPath / "prod.js"
-	)
-}
-
-addCommandAlias("runDev", ";fastOptCompileCopy; backend/reStart --mode dev")
-addCommandAlias("runProd", ";fullOptCompileCopy; backend/reStart --mode prod")
-
 val scalafixRules = Seq(
 	"OrganizeImports",
 	"DisableSyntax",
@@ -132,9 +95,6 @@ val CICommands = Seq(
 	"clean",
 	"backend/compile",
 	"backend/test",
-	"frontend/compile",
-	"frontend/fastOptJS",
-	"frontend/test",
 	s"scalafix --check $scalafixRules"
 ).mkString(";")
 

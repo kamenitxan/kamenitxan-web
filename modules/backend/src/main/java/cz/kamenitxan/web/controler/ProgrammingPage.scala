@@ -1,4 +1,4 @@
-package cz.kamenitxan.templateapp.controler
+package cz.kamenitxan.web.controler
 
 import cz.kamenitxan.jakon.core.custom_pages.{AbstractStaticPage, StaticPage}
 

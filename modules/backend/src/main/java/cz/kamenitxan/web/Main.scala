@@ -1,4 +1,4 @@
-package cz.kamenitxan.templateapp;
+package cz.kamenitxan.web;
 
 object Main {
 

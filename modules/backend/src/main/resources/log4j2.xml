@@ -10,7 +10,7 @@
         <Logger name="cz.kamenitxan.jakon" level="trace" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
         </Logger>
-        <Logger name="cz.kamenitxan.templateapp" level="trace" additivity="false">
+        <Logger name="cz.kamenitxan.web" level="trace" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
         </Logger>
         <Root level="ERROR">
