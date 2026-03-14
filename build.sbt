@@ -4,7 +4,7 @@ import scala.collection.Seq
 
 val V = new {
 	val Scala = "3.3.7"
-	val jakon = "0.7.1"
+	val jakon = "0.7.3-SNAPSHOT"
 }
 val projectName = "kamenitxan-web"
 val projectVersion = "1.0.0"

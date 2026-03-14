@@ -20,7 +20,7 @@ class ContactPagelet extends AbstractJsonPagelet {
 
 		val entity = new EmailEntity(
 			"contact",
-			"info@kamenitxan.eu",
+			"tomas@kamenitxan.eu",
 			s"Nová poptávka od $name",
 			Map("name" -> name, "email" -> email, "message" -> message)
 		)

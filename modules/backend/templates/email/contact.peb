@@ -1,0 +1,28 @@
+{# @pebvariable name="name" type="java.lang.String" #}
+{# @pebvariable name="email" type="java.lang.String" #}
+{# @pebvariable name="message" type="java.lang.String" #}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontaktní formulář</title>
+</head>
+<body>
+    <h2>Nová zpráva z kontaktního formuláře</h2>
+    <table>
+        <tr>
+            <th>Jméno:</th>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <th>E-mail:</th>
+            <td><a href="mailto:{{ email }}">{{ email }}</a></td>
+        </tr>
+        <tr>
+            <th>Zpráva:</th>
+            <td>{{ message }}</td>
+        </tr>
+    </table>
+</body>
+</html>
+
