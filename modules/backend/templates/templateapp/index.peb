@@ -5,7 +5,7 @@
 <section class="hero min-h-[70vh] bg-base-100">
 	<div class="hero-content text-center flex-col max-w-3xl">
 		<div class="mb-4 text-6xl">💻</div>
-		<h1 class="text-5xl font-bold">Ahoj, jsem Kamenitxan</h1>
+		<h1 class="text-5xl font-bold">Ahoj, jsem Tomáš</h1>
 		<p class="py-6 text-lg opacity-80">
 			Pomáhám firmám a domácnostem s programováním na míru,
 			spolehlivými sítěmi Ubiquiti a chytrou domácností.

@@ -50,6 +50,8 @@ class AppInit extends JakonInit {
 				contactTemplate.create()
 			}
 		})
+
+		Director.render()
 	}
 
 }
